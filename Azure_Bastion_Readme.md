@@ -1,5 +1,8 @@
 ### Objectives of Azure Bastion Lab
 
+## Architecture Diagram
+![Az_Bastion_Lab Architecture](/images/Az_Bastion_Lab_Architecture.png)
+
 1. Create Resource Group
 
 2. Create VNet, Subnet in the RG
