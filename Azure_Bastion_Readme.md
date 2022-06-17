@@ -17,7 +17,11 @@
    ![Azure Portal](/images/Terraform_Apply.png)
 
 8. Test the connection
-   - From the Portal, connec to Linux VM through 'AzureBastion' and it will open a browser --> after entering the username and secret password, login successfully
-   ![Ping to LinuxVM](/images/LinuxVM_Login.png)
+   - From the Portal, connec to Linux VM through 'AzureBastion' and enter `username` and `password` 
+   ![Connect LinuxVM through Bastion](/images/LinuxVM_BastionConnect.png)
+    
+9.  After successful loginIt, it'll open a browser -->
 
-Once this is done, use `terraform destroy --auto-approve` to free up the Resources from the portal when you are ready
+   ![Linux VM](/images/LinuxVM_Login.png)
+
+10. Once this is done, use `terraform destroy --auto-approve` to free up the Resources from the portal when you are ready

@@ -44,11 +44,11 @@ module "az_bastion" {
 
 # # * * * * * * *  module vm is used for creating Virtual Machines in each of the RGs * * * * * * *
 module "vm" {
-  source       = "./modules/vm"
-  location     = var.location
-  environment  = var.environment
-  rg-test-name = module.resource_groups.rg-test-name
-  linuxVM_nic_id = module.virtual_networks.linuxVM_nic_id
+  source             = "./modules/vm"
+  location           = var.location
+  environment        = var.environment
+  rg-test-name       = module.resource_groups.rg-test-name
+  linuxVM_nic_id     = module.virtual_networks.linuxVM_nic_id
   final_linuxVM_pswd = module.az_key_vault.final_linuxVM_pswd
   depends_on         = [module.virtual_networks, module.az_key_vault, time_sleep.wait_30_seconds]
 }
@@ -63,7 +63,7 @@ module "traffic_rules" {
   subnet_with_LinuxVM_id   = module.virtual_networks.subnet_with_LinuxVM_id
   linuxVM_nic_id           = module.virtual_networks.linuxVM_nic_id
   azbastion-subnet-address = var.azbastion-subnet-address
-  depends_on = [module.resource_groups, module.vm, module.virtual_networks, module.az_bastion, time_sleep.wait_30_seconds]
+  depends_on               = [module.resource_groups, module.vm, module.virtual_networks, module.az_bastion, time_sleep.wait_30_seconds]
 }
 
 # # * * * * * * *  module for Azure Key Vault * * * * * * *
