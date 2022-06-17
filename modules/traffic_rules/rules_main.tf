@@ -131,7 +131,7 @@ resource "azurerm_subnet_network_security_group_association" "azbsubnet-and-nsg-
   subnet_id                 = var.AzureBastionSubnet-id
 }
 
-# * * * * * * *  NSG / Security rule for LinuxVM to allow only SSH traffic from the Azure Bastion * * * * * * *
+# * * * * * * *  NSG / Security rule for LinuxVM to allow only SSH/RDP traffic from the Azure Bastion * * * * * * *
 resource "azurerm_network_security_group" "linuxVM-nsg" {
   name                = "linuxVM-nsg"
   location            = var.location
