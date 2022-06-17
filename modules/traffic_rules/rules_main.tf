@@ -1,7 +1,6 @@
 # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #   NSG / Security rules for Azure Bastion Host to Inbound & Outbound traffic
 # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
 resource "azurerm_network_security_group" "azb-nsg" {
   name                = "azb-nsg"
   location            = var.location
